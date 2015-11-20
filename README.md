@@ -1,6 +1,18 @@
 # LevenshteinRb
+    
+Plain Ruby implementation of Levenshtein distance algorithm
+that measures the similarity of two strings. 
 
-TODO: Write a gem description
+# Disclaimer
+
+This implementation is intended for educational reasons. Use it in production 
+with caution. To compare really large strings you may want to use a Ruby 
+gem that relies on native C code or similar like
+
+* [levenshtein-ffi](https://github.com/dbalatero/levenshtein-ffi)
+* [damerau-levenshtein](https://github.com/GlobalNamesArchitecture/damerau-levenshtein)
+
+It is highly inspired by [this example implementation](http://rosettacode.org/wiki/Levenshtein_distance#Ruby).
 
 ## Installation
 
@@ -18,12 +30,5 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    LevenshteinRb::LevenshteinDistance.new('Tor', 'Tier').to_i # => 2
 
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/levenshtein_rb/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request

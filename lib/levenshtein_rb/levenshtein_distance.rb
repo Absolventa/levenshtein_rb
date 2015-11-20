@@ -1,14 +1,6 @@
 module LevenshteinRb
   class LevenshteinDistance
 
-    # Ruby implementation of
-    # Levenshtein distance algorithm
-    # that measures the similarity of
-    # two strings.
-    #
-    # Highly inspired by:
-    # http://rosettacode.org/wiki/Levenshtein_distance#Ruby
-
     # A demonstration; the table of numbers is the
     # "recurrence matrix". ε means the "empty word".
     #
