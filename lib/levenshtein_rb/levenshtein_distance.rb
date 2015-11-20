@@ -26,7 +26,13 @@ module LevenshteinRb
 
       attr_reader :store
 
-      delegate :[], :[]=, to: :store
+      def [](index)
+        store[index]
+      end
+
+      def []=(index, value)
+        store[index] = value
+      end
 
       def initialize(m, n)
         @store = Array.new(m+1) { Array.new(n+1) }
