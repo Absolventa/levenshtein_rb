@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = LevenshteinRb::VERSION
   spec.authors       = ["Robin Neumann\n"]
   spec.email         = ["robin.neumann@absolventa.de"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Implementation of Levenshtein algorithm to determine the similarity of two strings using only Ruby}
+  spec.description   = %q{Implementation of Levenshtein algorithm to determine the similarity of two strings using only Ruby}
   spec.homepage      = ""
   spec.license       = "MIT"
 
