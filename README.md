@@ -13,6 +13,9 @@ clean syntactic structure of Ruby. Use it in production with caution. To compare
 
 levenshtein_rb was inspired by [this example implementation](http://rosettacode.org/wiki/Levenshtein_distance#Ruby).
 
+During my heuristically flavoured (and therefore not really meaningful) benchmark I took 1.28 seconds to compute the Levenshtein distance of strings of length 1000 and ~ 30 seconds to compute the Levenshtein distance
+of strings of length 10000. Theoretically the algorithm itself is of complexity *O(mn)* where m and n are the sizes of the input strings. 
+
 ## Installation
 
 Add this line to your application's Gemfile:
