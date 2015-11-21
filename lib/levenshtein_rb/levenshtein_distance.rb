@@ -1,19 +1,6 @@
 module LevenshteinRb
   class LevenshteinDistance
 
-    # A demonstration; the table of numbers is the
-    # "recurrence matrix". ε means the "empty word".
-    #
-    #    | ε T o r
-    #  -----------
-    #  ε | 0 1 2 3
-    #  T | 1 0 1 2
-    #  i | 2 1 1 2
-    #  e | 3 2 2 2
-    #  r | 4 3 3 2
-    #            ↑
-    #          This last value is the Levenshtein distance
-
     class RecurrenceMatrix
 
       attr_reader :store
@@ -48,7 +35,8 @@ module LevenshteinRb
       # and the other string has length n
       # it takes exactly n steps to "build"
       # this string starting with the empty
-      # word
+      # word. This corresponds to the values of
+      # the first row and the first column.
       return m if n == 0
       return n if m == 0
 
@@ -76,13 +64,13 @@ module LevenshteinRb
 
       if same_character_for_both_words_is_added?(i, j)
         # No Operation required, take the previous value
-        # of the subwords without current character.
+        # of the subwords without current character
         d[i-1][j-1]
       else
         [
-          d[i-1][j]   + 1, # Look left in the matrix. This would be a "deletion". It costs +1.
-          d[i][j-1]   + 1, # Look directly above the current entry in matrix. This would correspond to an insertion which costs +1
-          d[i-1][j-1] + 1, # Completely substitute the character, this also costs +1
+          d[i-1][j]   + 1, # Look left in the matrix. This would be a "deletion". It costs + 1 more than d[i-1][j]]
+          d[i][j-1]   + 1, # Look directly above the current entry in matrix. This would correspond to an insertion which costs +1 additionally
+          d[i-1][j-1] + 1, # Completely substitute the character, this also costs +1 more  than d[j-1, i-1]
         ].min
       end
     end
