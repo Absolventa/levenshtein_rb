@@ -36,10 +36,7 @@ Or install it yourself as:
 
 # The Levenshtein algorithm
 
-The mathematical formalism is well-explained at [wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance), so let's concentrate on the example here. Let's examine the algorithm on explaining the steps with the example word-word combination "Tier" and "Tor". 
-
-Let ε denote the "empty word". The empty word is part of every string so we can write "εTor" and "εTier" equivalently. 
-
+The mathematical formalism is well-explained at [wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance), so let's concentrate on the example here. Let's examine the algorithm on explaining the steps with the example word-word combination x
 For a human being it is convenient to perform the
 algorithm by "filling a table". The table of numbers is the
 "recurrence matrix" in the Ruby code. In the mathematical literature, the recurrence matrix usually is denoted by *D*. 
